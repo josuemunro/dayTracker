@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+	<meta charset=utf-8>
+	<title>Day Tracker</title>
+	<link rel="stylesheet" href="index.css">
+	<script src='node_modules/node-calendar/node-calendar.js'></script>
+	<script src="betterCalendar.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<h1>Day Tracker</h1>
+		<a href="index.html"><img src="images/calendar.png"></a>
+		<a href="stats.html"><img src="images/statsicon.png"></a>
+		<a href="photos.html"><img src="images/photoicon.png"></a>
+		<a href="settings.html"><img src="images/settings-icon-6.png"></a>
+	</div>
+
+	<div id="calendar">
+		<div id="calendarhead">
+			<button id="left" onclick="loadcalendar(-1)">&lt;</button>
+			<h2 id="currentMonthandYear"></h2>
+			<button id="right" onclick="loadcalendar(1)">&gt;</button>
+		</div>
+		<table id="headings">
+				<tr>
+					<td>Mon</td>
+					<td>Tue</td>
+					<td>Wed</td>
+					<td>Thurs</td>
+					<td>Fri</td>
+					<td>Sat</td>
+					<td>Sun</td>
+				</tr>
+		</table>
+		<table id="maincalendar">
+
+		</table>
+	</div>
+
+</body>
+
+</html>

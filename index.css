@@ -1,0 +1,105 @@
+html {
+	font-family: Coolvetica;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	text-align: center;
+	font-size: 70px;
+	grid-area: 1 / 1 / 1 / 5;
+	color: white;
+	margin: 20 0 0 0;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	background-color: #0097DF;
+	height: 25%;
+}
+
+img {
+	height: 70px;
+	width: 70px;
+}
+
+a {
+	width: 100%;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+
+a:hover {
+	background-color: #00A5F4;
+}
+
+body {
+	background: #e0e0e0;
+}
+
+#calendarhead button {
+	background-color: white;
+	text-decoration: none;
+	border: none;
+	height: 100%;
+	width: 10%;
+	font-weight: bold;
+	font-size: 30px;
+	color: #0097DF;
+}
+
+#calendarhead button:hover {
+	color: black;
+}
+
+#calendarhead {
+	height: 6%;
+	display: flex;
+	align-items: center;
+	background-color: white;
+}
+
+h2 {
+	font-size: 35px;
+	text-align: center;
+	display: inline-block;
+	width: 80%;
+	margin: 0 0;
+	background-color: white;
+	color: #0097DF;
+}
+
+#left {
+	float: left;
+}
+
+#right {
+	float: right;
+}
+
+#headings {
+	width: 100%;
+	text-align: center;
+	table-layout: fixed;
+	font-size: 20px
+}
+
+#maincalendar {
+	border-collapse: collapse;
+	width: 100%;
+	height: 70%;
+}
+
+#maincalendar td {
+	border: 1px solid;
+	vertical-align: top;
+}
+
+#maincalendar td:hover {
+	background-color: #0097DF;
+}
