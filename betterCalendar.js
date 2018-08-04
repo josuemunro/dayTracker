@@ -37,7 +37,7 @@ function loadcalendar(changeMonth) {
 }
 
 function getDynamicData(){
-    document.body.innerHTML += "<h3>" + sessionStorage.dynamicDate + "</h3>"
+    document.body.innerHTML += "<h1>" + sessionStorage.dynamicDate + "</h1>"
 }
 
 function myCell(element, month) {
