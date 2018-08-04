@@ -27,7 +27,7 @@ function loadcalendar(changeMonth) {
 			if (index % 7 === 0 && index != 0) { // Creates a new row at the end of a week
 				calendarContent += "</tr>" + "<tr>"
 			}
-			calendarContent += "<td>" + activeMonth[index] + "</td>" //creates each slot in the calendar
+			calendarContent += "<td>" + "<a href=\"dayDetails.html\">" + activeMonth[index] + "</a>" + "</td>" //creates each slot in the calendar
 		}
 		calendarContent += "</tr>" //finishes the last table row
 		document.getElementById("maincalendar").innerHTML = calendarContent;
