@@ -11,7 +11,7 @@ function loadcalendar(changeMonth) {
 		var month = today.getMonth() + 1; //adds 1 since Date() uses [0-11] index and calendar uses [1-12] index
 		var year = today.getFullYear();
 		var currentMonthandYear = document.getElementById("currentMonthandYear");
-		currentMonthandYear.innerHTML = calendar.month_name[month] + " " + year; //updates header on page
+        currentMonthandYear.innerHTML = calendar.month_name[month] + " " + year; //updates header on page
 		var monthrange = calendar.monthrange(year, month); //array has [which day of week it starts on [0-6], how many days in month]
 		var activeMonth = new Array(monthrange[0]).fill(""); //this array now contains the empty slots at the start of the calendar
 
@@ -27,7 +27,7 @@ function loadcalendar(changeMonth) {
 			if (index % 7 === 0 && index != 0) { // Creates a new row at the end of a week
 				calendarContent += "</tr>" + "<tr>"
 			}
-			calendarContent += "<td>" + "<a href=\"dayDetails.html\">" + activeMonth[index] + "</a>" + "</td>" //creates each slot in the calendar
+			calendarContent += "<td id=\"" + activeMonth[index] + "\" onclick=\"myCell(this, " + month + ")\">" + activeMonth[index] + "</td>" //creates each slot in the calendar
 		}
 		calendarContent += "</tr>" //finishes the last table row
 		document.getElementById("maincalendar").innerHTML = calendarContent;
@@ -36,6 +36,11 @@ function loadcalendar(changeMonth) {
 	}
 }
 
-window.onload = function () {
-	loadcalendar(0);
+function getDynamicData(){
+    document.body.innerHTML += "<h3>" + sessionStorage.dynamicDate + "</h3>"
+}
+
+function myCell(element, month) {
+    sessionStorage.dynamicDate= (calendar.month_name[month] + " " + element.id);
+    window.location.assign("dynamicDate.html");
 }
